@@ -1,0 +1,14 @@
+
+PLAY [my test playbook] *****************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************
+fatal: [172.31.1.157]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.1.157 port 22: Connection refused", "unreachable": true}
+ok: [172.31.2.244]
+
+TASK [install package] ******************************************************************************************************************************************
+fatal: [172.31.2.244]: FAILED! => {"changed": false, "changes": {"installed": ["tree"]}, "msg": "You need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: extras_suggestions, langpacks, priorities, update-motd\n"]}
+
+PLAY RECAP ******************************************************************************************************************************************************
+172.31.1.157               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+172.31.2.244               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,10 @@
+---
+- name: My test playbook
+  hosts: all
+  become: yes
+  tasks:
+  - name: creating adirectory
+    file:
+      path: /home/ansuser/dir1
+      state: directory
+
